@@ -20,7 +20,7 @@ public class FizzBuzzSolution {
         } else if (isBuzz) {
             return "buzz";
         }
-        return String.valueOf(number);
+        return numStr;
     }
 
 }
