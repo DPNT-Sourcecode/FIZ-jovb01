@@ -10,27 +10,23 @@ public class FizzBuzzSolution {
         boolean hasFive = numStr.contains("5");
         boolean isDivisibleBy3 = number % 3 == 0;
         boolean isDivisibleBy5 = number % 5 == 0;
-
         boolean isFizz = isDivisibleBy3 || hasThree;
         boolean isBuzz = isDivisibleBy5 || hasFive;
         boolean isFizzBuzz = isDivisibleBy3 && isDivisibleBy5;
-
         boolean isFizzAndBuzz = isFizz && isBuzz;
 
         boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
+        boolean isFizzBuzzDeluxe = isFizzAndBuzz && isDeluxe;
         boolean isFizzAndIsDeluxe = isFizz && isDeluxe;
         boolean isBuzzAndIsDeluxe = isBuzz && isDeluxe;
-        boolean isFizzAndIsBuzzDeluxeAndIs = isFizzAndIsDeluxe && isBuzzAndIsDeluxe && isDeluxe;
-
         boolean isOdd = number % 2 != 0;
-
         boolean isFakeDeluxe = isOdd && isDeluxe;
         boolean isFizzAndFakeDeluxe = isFizz && isFakeDeluxe;
         boolean isBuzzAndFakeDeluxe = isBuzz && isFakeDeluxe;
         boolean isFizzAndIsBuzzAndIsFakeDeluxe = isFizz && isBuzz && isFakeDeluxe;
 
-        //boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
-        //boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
+        boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
+        boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
         if(isFizzAndIsBuzzAndIsFakeDeluxe) {
            return "fizz buzz fake deluxe";
@@ -42,13 +38,13 @@ public class FizzBuzzSolution {
             return "fake deluxe";
         } else if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
-        } else if(isFizzDeluxe){
+        } else if(isFizzAndIsDeluxe){
             return "fizz deluxe";
         } else if (isBuzzAndIsDeluxe) {
             return "buzz deluxe";
         } else if(isDeluxe) {
             return "deluxe";
-        } else if(isFizzAndBuzz || isFizzBuzz){
+        } else if(isFizzAndBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
