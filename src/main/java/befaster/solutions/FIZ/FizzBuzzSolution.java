@@ -12,21 +12,21 @@ public class FizzBuzzSolution {
         boolean isDivisibleBy5 = number % 5 == 0;
         boolean isFizz = isDivisibleBy3 || hasThree;
         boolean isBuzz = isDivisibleBy5 || hasFive;
-        boolean isFizzAndBuzz = isFizz && isBuzz;
+        boolean isFizzBuzz = isFizz && isBuzz;
 
         boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
         boolean isFizzDeluxe = isFizz && isDeluxe;
         boolean isBuzzDeluxe = isBuzz && isDeluxe;
-        boolean isFizzBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe && isDeluxe;
+        boolean isFizzBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe;
 
         boolean isOdd = number % 2 != 0;
         boolean isFakeDeluxe = isOdd && isDeluxe;
         boolean isFizzFakeDeluxe = isFizz && isFakeDeluxe;
         boolean isBuzzFakeDeluxe = isBuzz && isFakeDeluxe;
-        boolean isFizzBuzzFakeDeluxe = isFizzFakeDeluxe && isBuzzFakeDeluxe && isFakeDeluxe;
+        boolean isFizzBuzzFakeDeluxe = isFizzFakeDeluxe && isBuzzFakeDeluxe;
 
-        boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
-        boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
+        //isFizzDeluxe = isDivisibleBy3 && hasThree;
+        //isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
         if(isFizzBuzzFakeDeluxe) {
            return "fizz buzz fake deluxe";
@@ -40,15 +40,15 @@ public class FizzBuzzSolution {
             return "fizz buzz deluxe";
         } else if(isFizzDeluxe){
             return "fizz deluxe";
-        } else if (isBuzzIsDeluxe) {
+        } else if(isBuzzDeluxe) {
             return "buzz deluxe";
         } else if(isDeluxe) {
             return "deluxe";
-        } else if(isFizzAndBuzz){
+        } else if(isFizzBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
-        } else if (isBuzz) {
+        } else if(isBuzz) {
             return "buzz";
         }
         return numStr;
