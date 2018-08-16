@@ -19,7 +19,10 @@ public class FizzBuzzSolution {
 
         if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
-        } else if(isFizzAndBuzz || isFizzBuzz){
+        } else if(isDeluxe) {
+            return "deluxe";
+        }
+        else if(isFizzAndBuzz || isFizzBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
