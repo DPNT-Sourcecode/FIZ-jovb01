@@ -30,4 +30,19 @@ public class FizzBuzzSolutionTest {
         Assertions.assertThat(this.sut.fizzBuzz(25)).isEqualTo("buzz");
         Assertions.assertThat(this.sut.fizzBuzz(40)).isEqualTo("buzz");
     }
+
+    @Test
+    public void shouldExpectFizzBuzzForMultiplesOf15 (){
+        Assertions.assertThat(this.sut.fizzBuzz(15)).isEqualTo("fizz buzz");
+        Assertions.assertThat(this.sut.fizzBuzz(30)).isEqualTo("fizz buzz");
+        Assertions.assertThat(this.sut.fizzBuzz(45)).isEqualTo("fizz buzz");
+        Assertions.assertThat(this.sut.fizzBuzz(60)).isEqualTo("fizz buzz");
+        Assertions.assertThat(this.sut.fizzBuzz(75)).isEqualTo("fizz buzz");
+    }
+
+    @Test
+    public void shouldExpectFizzBuzzWhenIsFizzAndIsBuzz() {
+        Assertions.assertThat(this.sut.fizzBuzz(456)).isEqualTo("fizz buzz");
+        Assertions.assertThat(this.sut.fizzBuzz(546)).isEqualTo("fizz buzz");
+    }
 }
