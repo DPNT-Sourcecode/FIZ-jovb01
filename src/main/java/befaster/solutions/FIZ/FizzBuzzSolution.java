@@ -42,13 +42,7 @@ public class FizzBuzzSolution {
         } else if (isBuzzAndIsDeluxe) {
             return "buzz deluxe";
         } else*/
-        if(isFizzDeluxeBuzzDeluxe){
-            return "fizz deluxe buzz deluxe";
-        } else if(isFizzDeluxe) {
-            return "fizz deluxe";
-        } else if(isBuzzDeluxe) {
-            return "buzz deluxe";
-        } else if(isFizzAndIsBuzzAndIsFakeDeluxe) {
+        if(isFizzAndIsBuzzAndIsFakeDeluxe) {
             return "fizz buzz fake deluxe";
         } else if(isFizzAndFakeDeluxe){
             return "fizz fake deluxe";
@@ -56,11 +50,17 @@ public class FizzBuzzSolution {
             return "buzz fake deluxe";
         } else if(isFakeDeluxe){
             return "fake deluxe";
-        } else if(isFizzAndBuzz || isFizzBuzz){
+        } else if(isFizzDeluxeBuzzDeluxe){
+            return "fizz deluxe buzz deluxe";
+        } else if(isFizzDeluxe) {
+            return "fizz deluxe";
+        } else if(isBuzzDeluxe) {
+            return "buzz deluxe";
+        }  else if(isFizzAndBuzz || isFizzBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
-        } else if (isBuzz) {
+        } else if(isBuzz) {
             return "buzz";
         } else if(isDeluxe) {
             return "deluxe";
