@@ -23,7 +23,8 @@ public class FizzBuzzSolution {
         boolean isFizzAndFakeDeluxe = isFizz && isFakeDeluxe;
         boolean isBuzzAndFakeDeluxe = isBuzz && isFakeDeluxe;
         boolean isFizzAndIsBuzzAndIsFakeDeluxe = isFizz && isBuzz && isFakeDeluxe;
-
+        boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
+        boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
         if(isFizzAndIsBuzzAndIsFakeDeluxe) {
            return "fizz buzz fake deluxe";
