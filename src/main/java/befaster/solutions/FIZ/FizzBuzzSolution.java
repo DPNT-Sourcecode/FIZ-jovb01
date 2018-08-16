@@ -16,13 +16,17 @@ public class FizzBuzzSolution {
         boolean isFizzAndBuzz = isFizz && isBuzz;
         boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
         boolean isFizzBuzzDeluxe = isFizzAndBuzz && isDeluxe;
-
+        boolean isFizzAndIsDeluxe = isFizz && isDeluxe;
+        boolean isBuzzAndIsDeluxe = isBuzz && isDeluxe;
         if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
+        } else if(isFizzAndIsDeluxe){
+            return "fizz deluxe";
+        } else if (isBuzzAndIsDeluxe) {
+            return "buzz deluxe";
         } else if(isDeluxe) {
             return "deluxe";
-        }
-        else if(isFizzAndBuzz || isFizzBuzz){
+        } else if(isFizzAndBuzz || isFizzBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
