@@ -26,19 +26,13 @@ public class FizzBuzzSolution {
         boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
         boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
-        if(isFizzDeluxe && isBuzzDeluxe){
-            return "fizz deluxe buzz deluxe";
-        } else if(isFizzDeluxe) {
-            return "fizz deluxe";
-        } else if(isBuzzDeluxe) {
-            return "buzz deluxe";
-        } else /*if(isFizzAndIsBuzzAndIsFakeDeluxe) {
+        if(isFizzAndIsBuzzAndIsFakeDeluxe) {
            return "fizz buzz fake deluxe";
         } else if(isFizzAndFakeDeluxe){
             return "fizz fake deluxe";
         } else if(isBuzzAndFakeDeluxe) {
             return "buzz fake deluxe";
-        } else*/ if(isFakeDeluxe){
+        } else if(isFakeDeluxe){
             return "fake deluxe";
         } else if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
