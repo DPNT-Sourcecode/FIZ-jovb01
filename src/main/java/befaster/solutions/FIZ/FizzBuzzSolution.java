@@ -14,7 +14,7 @@ public class FizzBuzzSolution {
         boolean isFizzAndBuzz = isFizz && isBuzz;
 
         if(isFizzAndBuzz || isFizzBuzz){
-            return "fizzbuzz";
+            return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
         } else if (isBuzz) {
