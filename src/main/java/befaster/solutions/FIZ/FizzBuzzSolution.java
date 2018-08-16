@@ -16,8 +16,8 @@ public class FizzBuzzSolution {
         final boolean isFizzBuzz = isFizz && isBuzz;
 
         final boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
-        final boolean isFizzDeluxe = isFizz && isDeluxe;
-        final boolean isBuzzDeluxe = isBuzz && isDeluxe;
+        boolean isFizzDeluxe = isFizz && isDeluxe;
+        boolean isBuzzDeluxe = isBuzz && isDeluxe;
         final boolean isFizzBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe;
 
         final boolean isOdd = number % 2 != 0;
