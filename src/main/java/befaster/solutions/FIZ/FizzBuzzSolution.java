@@ -24,7 +24,6 @@ public class FizzBuzzSolution {
     }
 
     private boolean isDeluxe(final Integer number) {
-        if(number.toString().)
         return false;
     }
 
