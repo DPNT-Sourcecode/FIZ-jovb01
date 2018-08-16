@@ -22,11 +22,14 @@ public class FizzBuzzSolution {
         boolean isFakeDeluxe = isOdd && isDeluxe;
         boolean isFizzAndFakeDeluxe = isFizz && isFakeDeluxe;
         boolean isBuzzAndFakeDeluxe = isBuzz && isFakeDeluxe;
+        boolean isFizzANdIsBuzzAndIsFakeDeluxe = isFizz && isBuzz && isFakeDeluxe;
 
         if(isFizzAndFakeDeluxe){
             return "fizz fake deluxe";
         } else if(isBuzzAndFakeDeluxe) {
             return "buzz fake deluxe";
+        } else if(isFizzANdIsBuzzAndIsFakeDeluxe){
+            return "fizz buzz fake deluxe";
         } else if(isFakeDeluxe){
             return "fake deluxe";
         } else if(isFizzBuzzDeluxe) {
