@@ -24,6 +24,7 @@ public class FizzBuzzSolution {
         boolean isBuzzAndFakeDeluxe = isBuzz && isFakeDeluxe;
         boolean isFizzAndIsBuzzAndIsFakeDeluxe = isFizz && isBuzz && isFakeDeluxe;
 
+
         if(isFizzAndIsBuzzAndIsFakeDeluxe) {
            return "fizz buzz fake deluxe";
         } else if(isFizzAndFakeDeluxe){
