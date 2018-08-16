@@ -30,13 +30,19 @@ public class FizzBuzzSolution {
         isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
         if(isFizzBuzzFakeDeluxe) {
-           return "fizz buzz fake deluxe";
+            return "fizz buzz fake deluxe";
         } else if(isFizzFakeDeluxe){
             return "fizz fake deluxe";
         } else if(isBuzzFakeDeluxe) {
             return "buzz fake deluxe";
         } else if(isFakeDeluxe){
             return "fake deluxe";
+        } else if(isFizzBuzz){
+            return "fizz buzz";
+        } else if(isFizz) {
+            return "fizz";
+        } else if(isBuzz) {
+            return "buzz";
         } else if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
         } else if(isFizzDeluxe){
@@ -45,12 +51,6 @@ public class FizzBuzzSolution {
             return "buzz deluxe";
         } else if(isDeluxe) {
             return "deluxe";
-        } else if(isFizzBuzz){
-            return "fizz buzz";
-        } else if(isFizz) {
-            return "fizz";
-        } else if(isBuzz) {
-            return "buzz";
         }
         return numStr;
     }
