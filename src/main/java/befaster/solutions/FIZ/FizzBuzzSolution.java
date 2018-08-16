@@ -25,6 +25,7 @@ public class FizzBuzzSolution {
         boolean isFizzAndIsBuzzAndIsFakeDeluxe = isFizz && isBuzz && isFakeDeluxe;
         boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
         boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
+        boolean isFizzDeluxeBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe;
 
         /*if(isFizzAndIsBuzzAndIsFakeDeluxe) {
            return "fizz buzz fake deluxe";
@@ -41,11 +42,17 @@ public class FizzBuzzSolution {
         } else if (isBuzzAndIsDeluxe) {
             return "buzz deluxe";
         } else*/
-        if(isDeluxe) {
+        if(isFizzDeluxeBuzzDeluxe){
+            return "fizz deluxe buzz deluxe";
+        } else if(isFizzDeluxe) {
+            return "fizz deluxe";
+        } else if(isBuzzDeluxe) {
+            return "buzz deluxe";
+        } else if(isDeluxe) {
             return "deluxe";
         } else if(isFakeDeluxe){
-            return "fake deluxe"
-        }else if(isFizzAndBuzz || isFizzBuzz){
+            return "fake deluxe";
+        } else if(isFizzAndBuzz || isFizzBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";
@@ -55,8 +62,5 @@ public class FizzBuzzSolution {
         return numStr;
     }
 
-    private boolean isDeluxe(final Integer number) {
-        return false;
-    }
 
 }
