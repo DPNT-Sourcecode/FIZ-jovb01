@@ -6,25 +6,25 @@ public class FizzBuzzSolution {
 
     public String fizzBuzz(final Integer number) {
         final String numStr = number.toString();
-        boolean hasThree = numStr.contains("3");
-        boolean hasFive = numStr.contains("5");
-        boolean isDivisibleBy3 = number % 3 == 0;
-        boolean isDivisibleBy5 = number % 5 == 0;
+        final boolean hasThree = numStr.contains("3");
+        final boolean hasFive = numStr.contains("5");
+        final boolean isDivisibleBy3 = number % 3 == 0;
+        final boolean isDivisibleBy5 = number % 5 == 0;
 
-        boolean isFizz = isDivisibleBy3 || hasThree;
-        boolean isBuzz = isDivisibleBy5 || hasFive;
-        boolean isFizzBuzz = isFizz && isBuzz;
+        final boolean isFizz = isDivisibleBy3 || hasThree;
+        final boolean isBuzz = isDivisibleBy5 || hasFive;
+        final boolean isFizzBuzz = isFizz && isBuzz;
 
-        boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
-        boolean isFizzDeluxe = isFizz && isDeluxe;
-        boolean isBuzzDeluxe = isBuzz && isDeluxe;
-        boolean isFizzBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe;
+        final boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
+        final boolean isFizzDeluxe = isFizz && isDeluxe;
+        final boolean isBuzzDeluxe = isBuzz && isDeluxe;
+        final boolean isFizzBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe;
 
-        boolean isOdd = number % 2 != 0;
-        boolean isFakeDeluxe = isOdd && isDeluxe;
-        boolean isFizzFakeDeluxe = isFizz && isFakeDeluxe;
-        boolean isBuzzFakeDeluxe = isBuzz && isFakeDeluxe;
-        boolean isFizzBuzzFakeDeluxe = isFizzFakeDeluxe && isBuzzFakeDeluxe;
+        final boolean isOdd = number % 2 != 0;
+        final boolean isFakeDeluxe = isOdd && isDeluxe;
+        final boolean isFizzFakeDeluxe = isFizz && isFakeDeluxe;
+        final boolean isBuzzFakeDeluxe = isBuzz && isFakeDeluxe;
+        final boolean isFizzBuzzFakeDeluxe = isFizzFakeDeluxe && isBuzzFakeDeluxe;
 
         isFizzDeluxe = isDivisibleBy3 && hasThree;
         isBuzzDeluxe = isDivisibleBy5 && hasFive;
@@ -37,12 +37,6 @@ public class FizzBuzzSolution {
             return "buzz fake deluxe";
         } else if(isFakeDeluxe){
             return "fake deluxe";
-        } else if(isFizzBuzz){
-            return "fizz buzz";
-        } else if(isFizz) {
-            return "fizz";
-        } else if(isBuzz) {
-            return "buzz";
         } else if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
         } else if(isFizzDeluxe){
@@ -51,6 +45,12 @@ public class FizzBuzzSolution {
             return "buzz deluxe";
         } else if(isDeluxe) {
             return "deluxe";
+        } else if(isFizzBuzz){
+            return "fizz buzz";
+        } else if(isFizz) {
+            return "fizz";
+        } else if(isBuzz) {
+            return "buzz";
         }
         return numStr;
     }
