@@ -2,6 +2,8 @@ package befaster.solutions.FIZ;
 
 public class FizzBuzzSolution {
 
+    private FizzBuzzSolutionHelper fizzBuzzSolutionHelper = new FizzBuzzSolutionHelper();
+
     public String fizzBuzz(final Integer number) {
         final String numStr = number.toString();
         boolean hasThree = numStr.contains("3");
@@ -12,8 +14,12 @@ public class FizzBuzzSolution {
         boolean isBuzz = isDivisibleBy5 || hasFive;
         boolean isFizzBuzz = isDivisibleBy3 && isDivisibleBy5;
         boolean isFizzAndBuzz = isFizz && isBuzz;
+        boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
+        boolean isFizzBuzzDeluxe = isFizzAndBuzz && isDeluxe;
 
-        if(isFizzAndBuzz || isFizzBuzz){
+        if(isFizzBuzzDeluxe) {
+            return "fizz buzz deluxe";
+        } else if(isFizzAndBuzz || isFizzBuzz){
             return "fizz buzz";
         } else if(isFizz) {
             return "fizz";

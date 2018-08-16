@@ -17,11 +17,11 @@ public class FizzBuzzSolutionHelperTest {
     public void shouldExpectTrueOrFalseBasedOnInputProvided() {
         Assertions.assertThat(this.sut.isDeluxe(11)).isTrue();
         Assertions.assertThat(this.sut.isDeluxe(22)).isTrue();
-        Assertions.assertThat(this.numberService.isDeluxe(33)).isTrue();
-        Assertions.assertThat(this.numberService.isDeluxe(44)).isTrue();
-        Assertions.assertThat(this.numberService.isDeluxe(555)).isTrue();
-        Assertions.assertThat(this.numberService.isDeluxe(9999)).isTrue();
-        Assertions.assertThat(this.numberService.isDeluxe(223L)).isFalse();
-        Assertions.assertThat(this.numberService.isDeluxe(9989L)).isFalse();
+        Assertions.assertThat(this.sut.isDeluxe(33)).isTrue();
+        Assertions.assertThat(this.sut.isDeluxe(44)).isTrue();
+        Assertions.assertThat(this.sut.isDeluxe(555)).isTrue();
+        Assertions.assertThat(this.sut.isDeluxe(9999)).isTrue();
+        Assertions.assertThat(this.sut.isDeluxe(223)).isFalse();
+        Assertions.assertThat(this.sut.isDeluxe(9989)).isFalse();
     }
 }
