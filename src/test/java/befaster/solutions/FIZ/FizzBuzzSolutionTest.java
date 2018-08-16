@@ -81,4 +81,9 @@ public class FizzBuzzSolutionTest {
         Assertions.assertThat(this.sut.fizzBuzz(333)).isEqualTo("fizz fake deluxe");
         Assertions.assertThat(this.sut.fizzBuzz(777)).isEqualTo("fizz fake deluxe");
     }
+
+    @Test
+    public void seeWhat(){
+        System.out.println(this.sut.fizzBuzz(3));
+    }
 }
