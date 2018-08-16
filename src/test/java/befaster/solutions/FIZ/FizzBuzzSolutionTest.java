@@ -79,8 +79,12 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void shouldExpectFakeDeluxe() {
-        Assertions.assertThat(this.sut.fizzBuzz(333)).isEqualTo("fake deluxe");
         Assertions.assertThat(this.sut.fizzBuzz(555)).isEqualTo("fake deluxe");
         Assertions.assertThat(this.sut.fizzBuzz(777)).isEqualTo("fake deluxe");
+    }
+
+    @Test
+    public void shouldExpectFizzFakeDeluxe() {
+        Assertions.assertThat(this.sut.fizzBuzz(333)).isEqualTo("fizz fake deluxe");
     }
 }
