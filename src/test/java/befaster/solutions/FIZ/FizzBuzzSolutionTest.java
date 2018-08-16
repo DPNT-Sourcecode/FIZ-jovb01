@@ -73,7 +73,6 @@ public class FizzBuzzSolutionTest {
     @Test
     public void shouldExpectFizzDeluxe(){
         Assertions.assertThat(this.sut.fizzBuzz(222)).isEqualTo("fizz deluxe");
-        Assertions.assertThat(this.sut.fizzBuzz(333)).isEqualTo("fizz deluxe");
         Assertions.assertThat(this.sut.fizzBuzz(777)).isEqualTo("fizz deluxe");
     }
 
