@@ -55,8 +55,4 @@ public class FizzBuzzSolution {
         return numStr;
     }
 
-    private boolean isDeluxe(final Integer number) {
-        return false;
-    }
-
 }
