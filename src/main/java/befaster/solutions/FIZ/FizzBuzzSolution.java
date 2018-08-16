@@ -18,7 +18,12 @@ public class FizzBuzzSolution {
         boolean isFizzBuzzDeluxe = isFizzAndBuzz && isDeluxe;
         boolean isFizzAndIsDeluxe = isFizz && isDeluxe;
         boolean isBuzzAndIsDeluxe = isBuzz && isDeluxe;
-        if(isFizzBuzzDeluxe) {
+        boolean isOdd = number % 2 != 0;
+        boolean isFakeDeluxe = isOdd && isDeluxe;
+
+        if(isFakeDeluxe) {
+            return "fake deluxe";
+        } else if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
         } else if(isFizzAndIsDeluxe){
             return "fizz deluxe";
