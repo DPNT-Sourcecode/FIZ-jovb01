@@ -8,10 +8,10 @@ public class FizzBuzzSolution {
         final boolean hasFive = numStr.contains("5");
         if((hasThree && hasFive) || (number % 3 == 0 && number % 5 == 0)) {
             return "fizz buzz";
-        } else if(number % 5 == 0 || hasFive) {
-            return "buzz";
         } else if(number % 3 == 0 || hasThree) {
             return "fizz";
+        } else if(number % 5 == 0 || hasFive) {
+            return "buzz";
         }
         return numStr;
     }
