@@ -12,35 +12,35 @@ public class FizzBuzzSolution {
         boolean isDivisibleBy5 = number % 5 == 0;
         boolean isFizz = isDivisibleBy3 || hasThree;
         boolean isBuzz = isDivisibleBy5 || hasFive;
-        boolean isFizzBuzz = isDivisibleBy3 && isDivisibleBy5;
         boolean isFizzAndBuzz = isFizz && isBuzz;
 
         boolean isDeluxe = this.fizzBuzzSolutionHelper.isDeluxe(number);
-        boolean isFizzBuzzDeluxe = isFizzAndBuzz && isDeluxe;
-        boolean isFizzAndIsDeluxe = isFizz && isDeluxe;
-        boolean isBuzzAndIsDeluxe = isBuzz && isDeluxe;
+        boolean isFizzDeluxe = isFizz && isDeluxe;
+        boolean isBuzzDeluxe = isBuzz && isDeluxe;
+        boolean isFizzBuzzDeluxe = isFizzDeluxe && isBuzzDeluxe && isDeluxe;
+
         boolean isOdd = number % 2 != 0;
         boolean isFakeDeluxe = isOdd && isDeluxe;
-        boolean isFizzAndFakeDeluxe = isFizz && isFakeDeluxe;
-        boolean isBuzzAndFakeDeluxe = isBuzz && isFakeDeluxe;
-        boolean isFizzAndIsBuzzAndIsFakeDeluxe = isFizz && isBuzz && isFakeDeluxe;
+        boolean isFizzFakeDeluxe = isFizz && isFakeDeluxe;
+        boolean isBuzzFakeDeluxe = isBuzz && isFakeDeluxe;
+        boolean isFizzBuzzFakeDeluxe = isFizzFakeDeluxe && isBuzzFakeDeluxe && isFakeDeluxe;
 
         boolean isFizzDeluxe = isDivisibleBy3 && hasThree;
         boolean isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
-        if(isFizzAndIsBuzzAndIsFakeDeluxe) {
+        if(isFizzBuzzFakeDeluxe) {
            return "fizz buzz fake deluxe";
-        } else if(isFizzAndFakeDeluxe){
+        } else if(isFizzFakeDeluxe){
             return "fizz fake deluxe";
-        } else if(isBuzzAndFakeDeluxe) {
+        } else if(isBuzzFakeDeluxe) {
             return "buzz fake deluxe";
         } else if(isFakeDeluxe){
             return "fake deluxe";
         } else if(isFizzBuzzDeluxe) {
             return "fizz buzz deluxe";
-        } else if(isFizzAndIsDeluxe){
+        } else if(isFizzDeluxe){
             return "fizz deluxe";
-        } else if (isBuzzAndIsDeluxe) {
+        } else if (isBuzzIsDeluxe) {
             return "buzz deluxe";
         } else if(isDeluxe) {
             return "deluxe";
