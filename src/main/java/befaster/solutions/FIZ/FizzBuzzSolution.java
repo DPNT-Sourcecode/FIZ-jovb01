@@ -23,4 +23,9 @@ public class FizzBuzzSolution {
         return numStr;
     }
 
+    private boolean isDeluxe(final Integer number) {
+        if(number.toString().)
+        return false;
+    }
+
 }
