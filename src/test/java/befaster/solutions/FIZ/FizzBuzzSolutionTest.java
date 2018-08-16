@@ -20,6 +20,7 @@ public class FizzBuzzSolutionTest {
         Assertions.assertThat(this.sut.fizzBuzz(9)).isEqualTo("fizz");
         Assertions.assertThat(this.sut.fizzBuzz(12)).isEqualTo("fizz");
         Assertions.assertThat(this.sut.fizzBuzz(18)).isEqualTo("fizz");
+       // Assertions.assertThat(this.sut.fizzBuzz(666)).isEqualTo("fizz");
     }
 
     @Test
@@ -78,12 +79,9 @@ public class FizzBuzzSolutionTest {
 
     @Test
     public void shouldExpectFizzFakeDeluxe() {
+        Assertions.assertThat(this.sut.fizzBuzz(3)).isEqualTo("fizz fake deluxe");
+        Assertions.assertThat(this.sut.fizzBuzz(237)).isEqualTo("fizz fake deluxe");
         Assertions.assertThat(this.sut.fizzBuzz(333)).isEqualTo("fizz fake deluxe");
         Assertions.assertThat(this.sut.fizzBuzz(777)).isEqualTo("fizz fake deluxe");
-    }
-
-    @Test
-    public void seeWhat(){
-        System.out.println(this.sut.fizzBuzz(3));
     }
 }
