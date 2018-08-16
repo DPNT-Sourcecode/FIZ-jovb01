@@ -10,6 +10,7 @@ public class FizzBuzzSolution {
         boolean hasFive = numStr.contains("5");
         boolean isDivisibleBy3 = number % 3 == 0;
         boolean isDivisibleBy5 = number % 5 == 0;
+
         boolean isFizz = isDivisibleBy3 || hasThree;
         boolean isBuzz = isDivisibleBy5 || hasFive;
         boolean isFizzBuzz = isFizz && isBuzz;
@@ -25,8 +26,8 @@ public class FizzBuzzSolution {
         boolean isBuzzFakeDeluxe = isBuzz && isFakeDeluxe;
         boolean isFizzBuzzFakeDeluxe = isFizzFakeDeluxe && isBuzzFakeDeluxe;
 
-        //isFizzDeluxe = isDivisibleBy3 && hasThree;
-        //isBuzzDeluxe = isDivisibleBy5 && hasFive;
+        isFizzDeluxe = isDivisibleBy3 && hasThree;
+        isBuzzDeluxe = isDivisibleBy5 && hasFive;
 
         if(isFizzBuzzFakeDeluxe) {
            return "fizz buzz fake deluxe";
